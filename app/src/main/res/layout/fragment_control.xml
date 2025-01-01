@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ControlFragment">
+
+    <ImageView
+        android:id="@+id/goIV"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/urlET"
+        app:layout_constraintEnd_toStartOf="@+id/backIV"
+        app:layout_constraintTop_toTopOf="@+id/urlET"
+        app:srcCompat="@drawable/go" />
+
+    <ImageView
+        android:id="@+id/new_page"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/urlET"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/urlET"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/new_page" />
+
+    <ImageView
+        android:id="@+id/backIV"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nextIV"
+        app:layout_constraintTop_toTopOf="@+id/goIV" />
+
+    <ImageView
+        android:id="@+id/nextIV"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:src="@drawable/next"
+        app:layout_constraintBottom_toBottomOf="@+id/backIV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backIV" />
+
+    <EditText
+        android:id="@+id/urlET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:ems="10"
+        android:hint="Enter URL"
+        android:inputType="textWebEditText"
+        app:layout_constraintEnd_toStartOf="@+id/goIV"
+        app:layout_constraintStart_toEndOf="@+id/new_page"
+        tools:layout_editor_absoluteY="686dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
